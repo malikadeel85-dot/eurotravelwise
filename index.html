@@ -1,32 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3092609289418171"
-     crossorigin="anonymous"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>EuroTravelWise | Europe Travel Guides, Destinations & Hotels</title>
 
-  <meta name="description" content="Explore Europe with EuroTravelWise — destination guides, travel tips, hotel ideas and practical information for planning your next European trip.">
+  <meta name="description"
+        content="Explore Europe with EuroTravelWise — destination guides, travel tips, hotel ideas and practical information for planning your next European trip.">
 
-  <meta name="keywords" content="Europe travel guide, European destinations, Europe travel tips, Europe hotels, Italy travel, France travel, Spain travel">
-<meta name="robots" content="index, follow">
-  
+  <meta name="keywords"
+        content="Europe travel guide, European destinations, Europe travel tips, Europe hotels, Italy travel, France travel, Spain travel">
+
+  <meta name="robots" content="index, follow">
+
   <link rel="canonical" href="https://www.eurotravelwise.com/">
 
- <meta property="og:title" content="EuroTravelWise | Europe Travel Guides, Destinations & Hotels">
-  <meta property="og:description" content="Explore Europe with EuroTravelWise — destination guides, travel tips, hotel ideas and practical information for planning your next European trip.">
-  <meta property="og:url" content="https://www.eurotravelwise.com/">
+  <!-- Open Graph -->
+  <meta property="og:title"
+        content="EuroTravelWise | Europe Travel Guides, Destinations & Hotels">
+
+  <meta property="og:description"
+        content="Explore Europe with EuroTravelWise — destination guides, travel tips, hotel ideas and practical information for planning your next European trip.">
+
+  <meta property="og:url"
+        content="https://www.eurotravelwise.com/">
+
   <meta property="og:type" content="website">
 
+  <meta property="og:site_name" content="EuroTravelWise">
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EuroTravelWise | Europe Travel Guides, Destinations & Hotels">
-  <meta name="twitter:description" content="Explore Europe with destination guides, travel tips, hotel ideas and practical trip-planning information.">
+
+  <meta name="twitter:title"
+        content="EuroTravelWise | Europe Travel Guides, Destinations & Hotels">
+
+  <meta name="twitter:description"
+        content="Explore Europe with destination guides, travel tips, hotel ideas and practical travel information.">
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3092692894181717"
+    crossorigin="anonymous"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "EuroTravelWise",
+    "url": "https://www.eurotravelwise.com/",
+    "description": "Europe travel guides, destinations, hotels and practical travel information.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.eurotravelwise.com/destinations.html?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
   <style>
+    :root {
+      --blue: #1769e0;
+      --blue-dark: #0f4fb4;
+      --navy: #172033;
+      --text: #273247;
+      --muted: #64748b;
+      --light: #f5f8fc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+      --radius: 18px;
+    }
+
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
@@ -34,11 +86,10 @@
     }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #172033;
-      background: #f7f9fc;
-      line-height: 1.6;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
     }
 
     a {
@@ -46,177 +97,248 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
-      width: min(1120px, 92%);
+      width: min(1120px, calc(100% - 40px));
       margin: auto;
     }
 
-    /* Header */
-    .site-header {
-      background: #ffffff;
-      border-bottom: 1px solid #e7ebf2;
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
     }
 
-    .nav-wrap {
-      min-height: 72px;
+    .nav {
+      min-height: 74px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 25px;
     }
 
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 800;
+      color: var(--navy);
       white-space: nowrap;
     }
 
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--blue);
+      color: white;
       display: grid;
       place-items: center;
-      background: #1769e0;
-      color: white;
-      font-weight: 900;
+      font-weight: 800;
+      font-size: 14px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
-      font-size: 15px;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
       font-weight: 600;
+      color: #172033;
+      transition: 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: #1769e0;
+      color: var(--blue);
     }
 
-    .nav-button {
-      background: #1769e0;
-      color: white !important;
-      padding: 10px 16px;
-      border-radius: 8px;
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 27px;
+      cursor: pointer;
+      color: var(--navy);
     }
 
-    /* Hero */
+    /* =========================
+       HERO
+    ========================== */
+
     .hero {
-      background: linear-gradient(135deg, #eef5ff, #ffffff);
-      padding: 90px 0 75px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(23,105,224,0.12), transparent 28%),
+        linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+      padding: 90px 0 85px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
       align-items: center;
-      gap: 55px;
     }
 
     .eyebrow {
       display: inline-block;
-      color: #1769e0;
+      color: var(--blue);
       font-size: 13px;
       font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
     }
 
-    h1 {
-      margin: 0 0 20px;
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.05;
+    .hero h1 {
+      color: var(--navy);
+      font-size: clamp(45px, 6vw, 72px);
+      line-height: 1.02;
       letter-spacing: -2px;
+      margin-bottom: 24px;
     }
 
     .hero-text {
       max-width: 650px;
-      font-size: 19px;
-      color: #536174;
-      margin-bottom: 30px;
+      color: #53627a;
+      font-size: 18px;
+      margin-bottom: 32px;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .button {
-      display: inline-block;
-      padding: 13px 21px;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
       border-radius: 9px;
+      font-size: 14px;
       font-weight: 700;
+      transition: 0.2s ease;
     }
 
-    .button-primary {
-      background: #1769e0;
-      color: #fff;
+    .btn-primary {
+      background: var(--blue);
+      color: white;
     }
 
-    .button-secondary {
-      background: #fff;
-      border: 1px solid #d8dee9;
+    .btn-primary:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--navy);
+      border: 1px solid #d7dfeb;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--blue);
+      color: var(--blue);
     }
 
     .hero-card {
-      background: #172033;
+      background: var(--navy);
       color: white;
-      border-radius: 20px;
-      padding: 35px;
-      box-shadow: 0 20px 45px rgba(23,32,51,.16);
+      padding: 34px;
+      border-radius: 18px;
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.20);
     }
 
     .hero-card h2 {
-      margin-top: 0;
-      font-size: 28px;
+      font-size: 25px;
+      line-height: 1.3;
+      margin-bottom: 20px;
     }
 
     .hero-card p {
-      color: #cbd4e2;
+      color: #d8e0ed;
+      margin-bottom: 20px;
+      font-size: 15px;
     }
 
-    .mini-list {
-      margin: 25px 0 0;
-      padding: 0;
+    .hero-list {
       list-style: none;
     }
 
-    .mini-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,.12);
+    .hero-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    /* Sections */
-    .section {
-      padding: 75px 0;
+    .hero-list li:last-child {
+      border-bottom: 0;
     }
 
-    .section-header {
-      max-width: 700px;
-      margin-bottom: 35px;
+    .hero-list li::before {
+      content: "✦";
+      color: #ffffff;
+      margin-right: 8px;
     }
 
-    .section-header h2 {
-      font-size: 38px;
-      line-height: 1.15;
-      margin: 0 0 12px;
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+      padding: 80px 0;
     }
 
-    .section-header p {
-      color: #647084;
-      font-size: 17px;
+    .section-light {
+      background: var(--light);
     }
 
-    /* Cards */
-    .card-grid {
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* =========================
+       FEATURE CARDS
+    ========================== */
+
+    .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
@@ -224,137 +346,292 @@
 
     .card {
       background: white;
-      border: 1px solid #e5e9f0;
-      border-radius: 15px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       padding: 28px;
-      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 8px 25px rgba(15,23,42,0.04);
+      transition: 0.25s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 35px rgba(23,32,51,.09);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
     }
 
     .card-icon {
-      font-size: 32px;
-      margin-bottom: 15px;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #eaf2ff;
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      margin-bottom: 18px;
     }
 
     .card h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
     .card p {
-      color: #647084;
+      color: var(--muted);
+      font-size: 15px;
       margin-bottom: 18px;
     }
 
     .card-link {
-      color: #1769e0;
+      color: var(--blue);
       font-weight: 700;
+      font-size: 14px;
     }
 
-    /* Destinations */
+    .card-link:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================
+       DESTINATIONS
+    ========================== */
+
     .destination-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
     .destination {
-      min-height: 210px;
-      padding: 28px;
-      border-radius: 17px;
-      color: white;
+      min-height: 180px;
+      border-radius: 16px;
+      padding: 25px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      background: linear-gradient(145deg, #1769e0, #172033);
-      box-shadow: 0 12px 30px rgba(23,32,51,.12);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #eaf2ff, #dceaff);
+      border: 1px solid var(--border);
     }
 
     .destination:nth-child(2) {
-      background: linear-gradient(145deg, #9b5de5, #30204d);
+      background: linear-gradient(135deg, #fff4e5, #ffe8c2);
     }
 
     .destination:nth-child(3) {
-      background: linear-gradient(145deg, #f28c28, #713d10);
+      background: linear-gradient(135deg, #eaf8ef, #d9f1e2);
     }
 
     .destination:nth-child(4) {
-      background: linear-gradient(145deg, #159957, #073b26);
+      background: linear-gradient(135deg, #f3edff, #e9ddff);
     }
 
-    .destination:nth-child(5) {
-      background: linear-gradient(145deg, #e85d75, #642031);
-    }
-
-    .destination:nth-child(6) {
-      background: linear-gradient(145deg, #2878c8, #102f50);
+    .destination span {
+      font-size: 12px;
+      color: var(--blue);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
     }
 
     .destination h3 {
-      margin: 0 0 5px;
-      font-size: 25px;
+      color: var(--navy);
+      font-size: 22px;
     }
 
-    .destination p {
-      margin: 0;
-      color: #edf3ff;
+    /* =========================
+       TRAVEL GUIDES
+    ========================== */
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
-    /* CTA */
-    .cta {
-      background: #1769e0;
+    .guide {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      background: white;
+      transition: 0.25s ease;
+    }
+
+    .guide:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .guide-top {
+      height: 120px;
+      background: linear-gradient(135deg, #1769e0, #69a1f5);
+    }
+
+    .guide:nth-child(2) .guide-top {
+      background: linear-gradient(135deg, #172033, #45536d);
+    }
+
+    .guide:nth-child(3) .guide-top {
+      background: linear-gradient(135deg, #2d8b57, #70c792);
+    }
+
+    .guide-content {
+      padding: 24px;
+    }
+
+    .guide-content h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .guide-content p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       HOTEL SECTION
+    ========================== */
+
+    .hotel-box {
+      background: var(--navy);
       color: white;
+      border-radius: 22px;
+      padding: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .hotel-box h2 {
+      font-size: 35px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .hotel-box p {
+      color: #d5ddec;
+      font-size: 16px;
+    }
+
+    .hotel-points {
+      list-style: none;
+    }
+
+    .hotel-points li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+      color: #edf2fa;
+      font-size: 15px;
+    }
+
+    .hotel-points li::before {
+      content: "✓";
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-grid h2 {
+      color: var(--navy);
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .about-grid p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .about-box {
+      background: #f1f6ff;
+      border: 1px solid #dbe8fb;
       border-radius: 20px;
-      padding: 55px;
+      padding: 35px;
+    }
+
+    .about-box h3 {
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    /* =========================
+       NEWSLETTER / CTA
+    ========================== */
+
+    .cta {
       text-align: center;
+      background: #eef5ff;
     }
 
     .cta h2 {
-      margin: 0 0 12px;
-      font-size: 38px;
+      color: var(--navy);
+      font-size: 34px;
+      margin-bottom: 12px;
     }
 
     .cta p {
       max-width: 650px;
       margin: 0 auto 25px;
-      color: #e8f0ff;
+      color: var(--muted);
     }
 
-    .cta .button {
-      background: white;
-      color: #1769e0;
-    }
+    /* =========================
+       FOOTER
+    ========================== */
 
-    /* Footer */
     footer {
-      background: #121a29;
+      background: #101827;
       color: white;
-      margin-top: 75px;
       padding: 55px 0 25px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
       gap: 35px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand p {
+      color: #aeb9ca;
+      max-width: 330px;
+      margin-top: 15px;
+      font-size: 14px;
     }
 
     footer h3 {
-      margin-top: 0;
+      font-size: 15px;
+      margin-bottom: 15px;
     }
 
-    footer p,
-    footer a {
-      color: #b9c3d3;
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 9px;
     }
 
     footer a {
-      display: block;
-      margin: 7px 0;
+      color: #aeb9ca;
+      font-size: 14px;
     }
 
     footer a:hover {
@@ -362,359 +639,841 @@
     }
 
     .copyright {
-      border-top: 1px solid rgba(255,255,255,.1);
-      margin-top: 40px;
-      padding-top: 20px;
-      color: #8e9aad;
-      font-size: 14px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      text-align: center;
+      color: #8995a8;
+      font-size: 13px;
     }
 
-    /* Mobile */
-    @media (max-width: 850px) {
-      .nav-wrap {
-        flex-direction: column;
-        padding: 15px 0;
-      }
+    /* =========================
+       MOBILE
+    ========================== */
 
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-      }
+    @media (max-width: 900px) {
 
-      .hero {
-        padding: 60px 0;
-      }
-
-      .hero-grid {
+      .hero-grid,
+      .hotel-box,
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
-      .card-grid,
+      .cards,
+      .guide-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .destination-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        padding: 70px 0;
       }
     }
 
-    @media (max-width: 560px) {
-      h1 {
-        font-size: 42px;
+    @media (max-width: 680px) {
+
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav {
+        min-height: 65px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        padding: 18px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(15,23,42,0.08);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 11px 0;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero h1 {
+        font-size: 47px;
+        letter-spacing: -1.5px;
       }
 
       .hero-text {
-        font-size: 17px;
+        font-size: 16px;
       }
 
-      .card-grid,
+      section {
+        padding: 60px 0;
+      }
+
+      .section-heading h2,
+      .about-grid h2,
+      .hotel-box h2,
+      .cta h2 {
+        font-size: 30px;
+      }
+
+      .cards,
+      .guide-grid,
       .destination-grid,
       .footer-grid {
         grid-template-columns: 1fr;
       }
 
-      .cta {
-        padding: 35px 22px;
+      .hero-card,
+      .hotel-box {
+        padding: 28px;
       }
 
-      .cta h2 {
-        font-size: 30px;
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
       }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "name": "EuroTravelWise",
-    "url": "https://www.eurotravelwise.com/",
-    "description": "Europe travel guides, destination ideas and practical trip planning information."
-  }
-  </script>
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="container nav-wrap">
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-    <a class="brand" href="index.html">
-      <span class="brand-mark">EU</span>
-      <span>EuroTravelWise</span>
-    </a>
+  <header>
+    <div class="container nav">
 
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="destinations.html">Destinations</a>
-      <a href="travel-guides.html">Travel Guides</a>
-      <a href="hotels.html">Hotels</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">EU</span>
+        <span>EuroTravelWise</span>
+      </a>
 
-  </div>
-</header>
+      <button class="menu-btn"
+              id="menuBtn"
+              aria-label="Open navigation menu"
+              aria-expanded="false">
+        ☰
+      </button>
 
-<main>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="travel-guides.html">Travel Guides</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
 
-  <section class="hero">
-    <div class="container hero-grid">
+    </div>
+  </header>
 
-      <div>
-        <span class="eyebrow">EUROPE • TRAVEL • DISCOVERY</span>
 
-        <h1>Travel Europe smarter.</h1>
+  <!-- =========================
+       HERO
+  ========================== -->
 
-        <p class="hero-text">
-          Discover beautiful European destinations, practical travel guides,
-          hotel ideas and simple planning tips for your next journey.
-        </p>
+  <main>
 
-        <div class="hero-buttons">
-          <a class="button button-primary" href="destinations.html">
-            Explore Destinations
-          </a>
+    <section class="hero">
 
-          <a class="button button-secondary" href="travel-guides.html">
-            Read Travel Guides
-          </a>
+      <div class="container hero-grid">
+
+        <div>
+
+          <span class="eyebrow">
+            Europe • Travel • Discovery
+          </span>
+
+          <h1>
+            Travel Europe<br>
+            smarter.
+          </h1>
+
+          <p class="hero-text">
+            Discover beautiful European destinations, practical travel
+            guides, hotel ideas and simple planning tips for your next journey.
+          </p>
+
+          <div class="buttons">
+
+            <a href="destinations.html"
+               class="btn btn-primary">
+              Explore Destinations
+            </a>
+
+            <a href="travel-guides.html"
+               class="btn btn-secondary">
+              Read Travel Guides
+            </a>
+
+          </div>
+
         </div>
-      </div>
 
-      <div class="hero-card">
-        <h2>Plan your next European trip</h2>
 
-        <p>
-          Find destination inspiration, practical travel information
-          and ideas to help make your journey easier.
-        </p>
+        <div class="hero-card">
 
-        <ul class="mini-list">
-          <li>✦ Destination guides</li>
-          <li>✦ Travel planning tips</li>
-          <li>✦ Hotel ideas</li>
-          <li>✦ European city guides</li>
-        </ul>
-      </div>
+          <h2>
+            Plan your next European trip
+          </h2>
 
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-
-      <div class="section-header">
-        <span class="eyebrow">WHAT WE COVER</span>
-        <h2>Everything you need to plan a better trip.</h2>
-        <p>
-          Explore useful information for discovering Europe and planning
-          your next adventure.
-        </p>
-      </div>
-
-      <div class="card-grid">
-
-        <article class="card">
-          <div class="card-icon">🌍</div>
-          <h3>Destinations</h3>
           <p>
-            Discover popular European countries, cities and travel ideas.
+            Find destination inspiration, practical travel information
+            and ideas to help make your journey easier.
           </p>
-          <a class="card-link" href="destinations.html">
-            Explore destinations →
-          </a>
-        </article>
 
-        <article class="card">
-          <div class="card-icon">🧭</div>
-          <h3>Travel Guides</h3>
+          <ul class="hero-list">
+            <li>Destination guides</li>
+            <li>Travel planning tips</li>
+            <li>Hotel ideas</li>
+            <li>European city guides</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHAT WE COVER
+    ========================== -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            What we cover
+          </span>
+
+          <h2>
+            Everything you need to explore Europe
+          </h2>
+
           <p>
-            Get practical guides, planning tips and useful information
-            before your trip.
+            Useful travel information designed to help you discover
+            destinations and plan your European adventures.
           </p>
-          <a class="card-link" href="travel-guides.html">
-            Read guides →
-          </a>
-        </article>
 
-        <article class="card">
-          <div class="card-icon">🏨</div>
-          <h3>Hotels</h3>
+        </div>
+
+
+        <div class="cards">
+
+          <article class="card">
+
+            <div class="card-icon">🌍</div>
+
+            <h3>
+              European Destinations
+            </h3>
+
+            <p>
+              Explore cities, countries and places worth discovering
+              across Europe.
+            </p>
+
+            <a href="destinations.html"
+               class="card-link">
+              Explore destinations →
+            </a>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">🧭</div>
+
+            <h3>
+              Travel Guides
+            </h3>
+
+            <p>
+              Find practical travel tips, planning ideas and helpful
+              information for your next trip.
+            </p>
+
+            <a href="travel-guides.html"
+               class="card-link">
+              Read guides →
+            </a>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">🏨</div>
+
+            <h3>
+              Hotel Ideas
+            </h3>
+
+            <p>
+              Discover hotel information and ideas for different
+              European destinations.
+            </p>
+
+            <a href="hotels.html"
+               class="card-link">
+              Explore hotels →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         POPULAR DESTINATIONS
+    ========================== -->
+
+    <section class="section-light">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Popular Europe
+          </span>
+
+          <h2>
+            Start exploring
+          </h2>
+
           <p>
-            Explore hotel ideas and helpful accommodation information
-            for European trips.
+            Get inspiration for your next European adventure.
           </p>
-          <a class="card-link" href="hotels.html">
-            Explore hotels →
+
+        </div>
+
+
+        <div class="destination-grid">
+
+          <a href="destinations.html"
+             class="destination">
+
+            <span>Italy</span>
+
+            <h3>Rome</h3>
+
           </a>
-        </article>
+
+
+          <a href="destinations.html"
+             class="destination">
+
+            <span>France</span>
+
+            <h3>Paris</h3>
+
+          </a>
+
+
+          <a href="destinations.html"
+             class="destination">
+
+            <span>Spain</span>
+
+            <h3>Barcelona</h3>
+
+          </a>
+
+
+          <a href="destinations.html"
+             class="destination">
+
+            <span>Europe</span>
+
+            <h3>Amsterdam</h3>
+
+          </a>
+
+        </div>
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
 
-      <div class="section-header">
-        <span class="eyebrow">EUROPEAN DESTINATIONS</span>
-        <h2>Where will Europe take you?</h2>
-        <p>
-          Start exploring some of Europe's most interesting travel regions.
-        </p>
+    <!-- =========================
+         TRAVEL GUIDES
+    ========================== -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Travel Guides
+          </span>
+
+          <h2>
+            Helpful ideas before you travel
+          </h2>
+
+          <p>
+            Simple information to help you prepare for your European trip.
+          </p>
+
+        </div>
+
+
+        <div class="guide-grid">
+
+          <article class="guide">
+
+            <div class="guide-top"></div>
+
+            <div class="guide-content">
+
+              <h3>
+                Planning a European Trip
+              </h3>
+
+              <p>
+                Learn how to organize destinations, travel plans and
+                important trip details.
+              </p>
+
+              <a href="travel-guides.html"
+                 class="card-link">
+                Read travel guides →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="guide">
+
+            <div class="guide-top"></div>
+
+            <div class="guide-content">
+
+              <h3>
+                European City Breaks
+              </h3>
+
+              <p>
+                Discover ideas for memorable short trips around
+                Europe's popular cities.
+              </p>
+
+              <a href="destinations.html"
+                 class="card-link">
+                Explore cities →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="guide">
+
+            <div class="guide-top"></div>
+
+            <div class="guide-content">
+
+              <h3>
+                Hotel Planning
+              </h3>
+
+              <p>
+                Explore hotel ideas and useful information when
+                planning where to stay.
+              </p>
+
+              <a href="hotels.html"
+                 class="card-link">
+                Explore hotels →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
       </div>
 
-      <div class="destination-grid">
+    </section>
 
-        <a class="destination" href="destinations.html">
-          <h3>Italy</h3>
-          <p>Historic cities, coastlines & food</p>
-        </a>
 
-        <a class="destination" href="destinations.html">
-          <h3>France</h3>
-          <p>Paris, Provence & beyond</p>
-        </a>
+    <!-- =========================
+         HOTEL SECTION
+    ========================== -->
 
-        <a class="destination" href="destinations.html">
-          <h3>Spain</h3>
-          <p>Culture, beaches & vibrant cities</p>
-        </a>
+    <section class="section-light">
 
-        <a class="destination" href="destinations.html">
-          <h3>Germany</h3>
-          <p>Historic towns, cities & landscapes</p>
-        </a>
+      <div class="container">
 
-        <a class="destination" href="destinations.html">
-          <h3>Greece</h3>
-          <p>Islands, history & Mediterranean travel</p>
-        </a>
+        <div class="hotel-box">
 
-        <a class="destination" href="destinations.html">
-          <h3>Austria</h3>
-          <p>Alpine scenery, culture & cities</p>
-        </a>
+          <div>
+
+            <span class="eyebrow" style="color:#8bb8ff;">
+              Stay in Europe
+            </span>
+
+            <h2>
+              Find hotel ideas for your journey
+            </h2>
+
+            <p>
+              Explore hotel information and accommodation ideas
+              for European destinations.
+            </p>
+
+          </div>
+
+
+          <ul class="hotel-points">
+
+            <li>
+              European hotel ideas
+            </li>
+
+            <li>
+              Destination-based accommodation information
+            </li>
+
+            <li>
+              Practical planning information
+            </li>
+
+            <li>
+              Helpful travel resources
+            </li>
+
+          </ul>
+
+        </div>
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
 
-      <div class="cta">
-        <h2>Ready to explore Europe?</h2>
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section>
+
+      <div class="container about-grid">
+
+        <div>
+
+          <span class="eyebrow">
+            About EuroTravelWise
+          </span>
+
+          <h2>
+            Your practical guide to discovering Europe.
+          </h2>
+
+          <p>
+            EuroTravelWise is focused on European travel information,
+            destination inspiration, practical guides and hotel ideas.
+          </p>
+
+          <p>
+            Our goal is to make travel planning simpler by bringing
+            useful information together in one place.
+          </p>
+
+          <a href="about.html"
+             class="btn btn-primary">
+            Learn More About Us
+          </a>
+
+        </div>
+
+
+        <div class="about-box">
+
+          <h3>
+            Explore with confidence
+          </h3>
+
+          <p>
+            From famous European cities to travel planning ideas,
+            EuroTravelWise helps you discover possibilities for your
+            next journey.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          Ready to explore Europe?
+        </h2>
 
         <p>
           Browse our destinations and travel guides to start planning
-          your next European journey.
+          your next European adventure.
         </p>
 
-        <a class="button" href="destinations.html">
-          Start Exploring
-        </a>
+        <div class="buttons"
+             style="justify-content:center;">
+
+          <a href="destinations.html"
+             class="btn btn-primary">
+            Explore Destinations
+          </a>
+
+          <a href="contact.html"
+             class="btn btn-secondary">
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <a href="index.html"
+             class="logo"
+             style="color:white;">
+
+            <span class="logo-icon">
+              EU
+            </span>
+
+            <span>
+              EuroTravelWise
+            </span>
+
+          </a>
+
+          <p>
+            Europe travel guides, destination inspiration,
+            hotel ideas and practical travel information.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Explore
+          </h3>
+
+          <ul>
+
+            <li>
+              <a href="destinations.html">
+                Destinations
+              </a>
+            </li>
+
+            <li>
+              <a href="travel-guides.html">
+                Travel Guides
+              </a>
+            </li>
+
+            <li>
+              <a href="hotels.html">
+                Hotels
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Company
+          </h3>
+
+          <ul>
+
+            <li>
+              <a href="about.html">
+                About
+              </a>
+            </li>
+
+            <li>
+              <a href="contact.html">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Legal
+          </h3>
+
+          <ul>
+
+            <li>
+              <a href="privacy.html">
+                Privacy Policy
+              </a>
+            </li>
+
+            <li>
+              <a href="terms.html">
+                Terms
+              </a>
+            </li>
+
+            <li>
+              <a href="disclaimer.html">
+                Disclaimer
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © <span id="year"></span> EuroTravelWise.
+        All rights reserved.
+
       </div>
 
     </div>
-  </section>
 
-  <section class="section seo-guides">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">EUROPE TRAVEL RESOURCES</span>
-      <h2>Explore Europe Travel Guides</h2>
-      <p>
-        Discover practical Europe travel guides, destination ideas, hotel information
-        and trip-planning tips to help you plan your next European journey.
-      </p>
-    </div>
+  </footer>
 
-    <div class="feature-grid">
 
-      <article class="feature-card">
-        <h3>European Destinations</h3>
-        <p>
-          Explore popular European countries, cities, coastlines and travel ideas
-          for your next trip.
-        </p>
-        <a href="destinations.html">Explore destinations →</a>
-      </article>
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
-      <article class="feature-card">
-        <h3>Europe Travel Guides</h3>
-        <p>
-          Find practical travel information, planning tips and useful ideas for
-          exploring Europe.
-        </p>
-        <a href="travel-guides.html">Read travel guides →</a>
-      </article>
+  <script>
 
-      <article class="feature-card">
-        <h3>Hotels in Europe</h3>
-        <p>
-          Discover hotel ideas and accommodation information for European cities
-          and destinations.
-        </p>
-        <a href="hotels.html">Explore hotels →</a>
-      </article>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
 
-    </div>
-  </div>
-</section>
+    menuBtn.addEventListener("click", function () {
 
-</main>
+      navLinks.classList.toggle("active");
 
-<footer>
-  <div class="container">
+      const isOpen =
+        navLinks.classList.contains("active");
 
-    <div class="footer-grid">
+      menuBtn.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
 
-      <div>
-        <a class="brand" href="index.html">
-          <span class="brand-mark">EU</span>
-          <span>EuroTravelWise</span>
-        </a>
+    });
 
-        <p>
-          Practical Europe travel guides, destination inspiration
-          and trip-planning ideas.
-        </p>
-      </div>
 
-      <div>
-        <h3>Explore</h3>
-        <a href="destinations.html">Destinations</a>
-        <a href="travel-guides.html">Travel Guides</a>
-        <a href="hotels.html">Hotels</a>
-      </div>
+    document.querySelectorAll(".nav-links a")
+      .forEach(function(link) {
 
-      <div>
-        <h3>Company</h3>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-      </div>
+        link.addEventListener("click", function() {
 
-      <div>
-        <h3>Legal</h3>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-        <a href="disclaimer.html">Disclaimer</a>
-      </div>
+          navLinks.classList.remove("active");
 
-    </div>
+          menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+          );
 
-    <div class="copyright">
-      © 2026 EuroTravelWise. All rights reserved.
-    </div>
+        });
 
-  </div>
-</footer>
+      });
+
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
 
 </body>
 </html>
