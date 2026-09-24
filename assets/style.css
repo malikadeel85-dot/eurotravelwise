@@ -102,3 +102,30 @@ footer {
     padding: 45px 15px;
   }
 }
+.btn-klook {
+  background: #16b978;
+  color: #ffffff;
+  padding: 15px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(22, 185, 120, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-klook span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.btn-klook:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(22, 185, 120, 0.35);
+  background: #119e68;
+  color: #ffffff;
+}
