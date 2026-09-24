@@ -1,5 +1,6 @@
 /* =========================================================
-   EUROTRAVELWISE - FINAL PROFESSIONAL HOME DESIGN
+   EUROTRAVELWISE
+   FINAL PROFESSIONAL TRAVEL WEBSITE DESIGN
    ========================================================= */
 
 * {
@@ -18,33 +19,50 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* =========================================================
    HEADER
-   ========================= */
+   ========================================================= */
 
 header {
   background: #ffffff;
   border-bottom: 1px solid #e8edf4;
-  padding: 14px 0;
+  padding: 12px 0;
   position: relative;
-  z-index: 20;
+  z-index: 100;
 }
 
 nav {
-  max-width: 1100px;
+  max-width: 1180px;
   margin: auto;
   padding: 0 20px;
 }
 
-/* =========================
-   GENERAL
-   ========================= */
+/* =========================================================
+   CONTAINER
+   ========================================================= */
 
 .container {
-  max-width: 1100px;
+  max-width: 1180px;
   margin: auto;
   padding: 0 20px;
 }
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
 
 h1,
 h2,
@@ -53,11 +71,11 @@ h3 {
 }
 
 h1 {
-  font-size: 58px;
+  font-size: 62px;
   line-height: 1.02;
   margin-bottom: 18px;
   color: #ffffff;
-  letter-spacing: -2px;
+  letter-spacing: -2.5px;
 }
 
 h2 {
@@ -72,362 +90,714 @@ p {
   color: #536176;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* =========================
+/* =========================================================
    HERO
-   ========================= */
+   ========================================================= */
 
 .hero {
   position: relative;
-  min-height: 445px;
-  padding: 55px 20px 48px;
+  min-height: 520px;
+  padding: 58px 20px 55px;
   overflow: hidden;
 
   background:
     linear-gradient(
       90deg,
-      rgba(5, 27, 62, 0.94) 0%,
-      rgba(7, 35, 76, 0.82) 45%,
-      rgba(10, 30, 55, 0.58) 100%
+      rgba(5, 27, 62, 0.90) 0%,
+      rgba(7, 35, 76, 0.72) 38%,
+      rgba(10, 30, 55, 0.28) 75%,
+      rgba(10, 30, 55, 0.10) 100%
     ),
-    url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2000&q=85")
+    url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2200&q=90")
     center center / cover no-repeat;
 }
 
-/* subtle overlay */
+/* Hero glow */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 78% 40%,
+      rgba(255,255,255,0.16),
+      transparent 35%
+    );
+
+  pointer-events: none;
+}
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
+
   background: linear-gradient(
-    90deg,
-    rgba(3, 22, 48, 0.15),
-    rgba(3, 22, 48, 0.05)
+    180deg,
+    rgba(3,22,48,0.05),
+    rgba(3,22,48,0.18)
   );
+
   pointer-events: none;
 }
 
-/* =========================
+/* =========================================================
    HERO GRID
-   ========================= */
+   ========================================================= */
 
 .hero-grid {
   position: relative;
-  z-index: 2;
+  z-index: 5;
 
-  max-width: 1100px;
+  max-width: 1180px;
   margin: auto;
 
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
+
   gap: 55px;
   align-items: center;
 }
 
-/* =========================
+/* =========================================================
    HERO TEXT
-   ========================= */
+   ========================================================= */
 
 .eyebrow {
-  color: #4da3ff;
+  color: #42a5ff;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .hero-copy {
-  max-width: 590px;
-  color: #eef5ff;
+  max-width: 620px;
+
+  color: #f2f7ff;
   font-size: 17px;
   line-height: 1.65;
-  margin-bottom: 25px;
+
+  margin-bottom: 26px;
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* =========================================================
+   BUTTON AREA
+   ========================================================= */
 
 .actions {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .btn {
+  min-height: 50px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
 
-  min-height: 48px;
-  padding: 12px 22px;
+  padding: 13px 24px;
 
-  border-radius: 10px;
+  border-radius: 12px;
+
   font-size: 14px;
   font-weight: 800;
 
-  transition: all 0.2s ease;
+  transition: all 0.22s ease;
 }
 
-/* Swiss / Klook button */
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   KLOOK / BOOK BUTTON
+   ========================================================= */
 
 .btn-primary,
 .klook-btn,
 .btn-klook {
-  background: #12b878;
-  color: #ffffff !important;
-  border: 1px solid #12b878;
+  background: linear-gradient(
+    135deg,
+    #10b981,
+    #08a66d
+  );
 
-  box-shadow: 0 10px 24px rgba(18, 184, 120, 0.28);
+  color: #ffffff !important;
+
+  border: 1px solid #10b981;
+
+  box-shadow:
+    0 12px 25px rgba(16,185,129,0.28);
 }
 
 .btn-primary:hover,
 .klook-btn:hover,
 .btn-klook:hover {
-  background: #0d9e67;
+  background: linear-gradient(
+    135deg,
+    #0da873,
+    #078b5c
+  );
+
   color: #ffffff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(18, 184, 120, 0.36);
+
+  box-shadow:
+    0 16px 32px rgba(16,185,129,0.38);
 }
 
-/* Secondary button */
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
 
 .btn-light {
   background: #ffffff;
-  color: #102a56 !important;
-  border: 1px solid #dce5f0;
 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  color: #102a56 !important;
+
+  border: 1px solid #e2e9f2;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.10);
 }
 
 .btn-light:hover {
-  background: #f3f7fc;
+  background: #f5f9ff;
   color: #1261d6 !important;
-  transform: translateY(-2px);
 }
 
-/* =========================
+/* =========================================================
    HERO RIGHT CARD
-   ========================= */
+   ========================================================= */
 
 .hero-card {
-  background: rgba(11, 29, 56, 0.94);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(14,38,73,0.97),
+      rgba(8,27,54,0.96)
+    );
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.14);
 
-  padding: 28px;
+  border-radius: 22px;
 
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
+  padding: 30px;
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,0.30);
+
+  backdrop-filter: blur(10px);
+
+  min-height: 280px;
 }
 
 .hero-card h2 {
   color: #ffffff;
-  font-size: 24px;
-  margin-bottom: 8px;
+
+  font-size: 25px;
+
+  line-height: 1.2;
+
+  margin-bottom: 10px;
 }
 
 .hero-card p {
-  color: #dbe7f7;
+  color: #dce8f7;
+
   font-size: 14px;
-  margin-bottom: 15px;
+
+  line-height: 1.6;
+
+  margin-bottom: 16px;
 }
+
+/* =========================================================
+   HERO LIST
+   ========================================================= */
 
 .hero-list {
   list-style: none;
+
   padding: 0;
   margin: 0;
 }
 
 .hero-list li {
   color: #ffffff;
+
   font-size: 14px;
+
   font-weight: 600;
 
-  padding: 10px 0;
+  padding: 11px 0;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom:
+    1px solid rgba(255,255,255,0.14);
 }
 
 .hero-list li:last-child {
   border-bottom: none;
 }
 
-/* =========================
-   QUICK SERVICE CARDS
-   ========================= */
+/* =========================================================
+   QUICK SERVICE AREA
+   ========================================================= */
+
+.quick-services {
+  position: relative;
+  z-index: 10;
+
+  margin-top: -20px;
+
+  padding-bottom: 10px;
+}
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
 }
+
+/* =========================================================
+   SERVICE CARD
+   ========================================================= */
 
 .card {
   background: #ffffff;
-  border: 1px solid #e3eaf3;
-  border-radius: 16px;
+
+  border: 1px solid #e2eaf3;
+
+  border-radius: 17px;
+
   padding: 22px;
 
   margin: 0;
 
-  box-shadow: 0 8px 25px rgba(24, 45, 75, 0.07);
+  box-shadow:
+    0 10px 30px rgba(24,45,75,0.08);
 
-  transition: all 0.2s ease;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(24, 45, 75, 0.12);
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px rgba(24,45,75,0.14);
 }
 
 .card h3 {
+  color: #16243d;
+
   font-size: 16px;
+
   margin-bottom: 5px;
 }
 
 .card p {
   font-size: 12px;
+
   line-height: 1.5;
+
   margin: 0;
 }
 
-/* =========================
-   SECTIONS
-   ========================= */
+/* =========================================================
+   SERVICE ICON
+   ========================================================= */
 
-section {
-  padding: 55px 0;
-}
-
-.section-head {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 35px;
-}
-
-.section-head h2 {
-  font-size: 40px;
-  line-height: 1.15;
-  margin-bottom: 10px;
-  letter-spacing: -1px;
-}
-
-.section-head p {
-  color: #697386;
-}
-
-/* =========================
-   DESTINATION CARDS
-   ========================= */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.cards .card {
-  overflow: hidden;
-  padding: 0;
-}
-
-.card-visual {
-  min-height: 170px;
+.card-icon {
+  width: 50px;
+  height: 50px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 48px;
+  border-radius: 15px;
 
-  background: linear-gradient(
-    135deg,
-    #dcecff,
-    #eef5ff
-  );
+  font-size: 25px;
+
+  margin-bottom: 13px;
+
+  background: #eaf3ff;
 }
+
+/* =========================================================
+   MAIN SECTIONS
+   ========================================================= */
+
+section {
+  padding: 65px 0;
+}
+
+.section-head {
+  text-align: center;
+
+  max-width: 760px;
+
+  margin: 0 auto 35px;
+}
+
+.section-head .eyebrow {
+  margin-bottom: 8px;
+}
+
+.section-head h2 {
+  color: #10233f;
+
+  font-size: 42px;
+
+  line-height: 1.15;
+
+  margin-bottom: 10px;
+
+  letter-spacing: -1px;
+}
+
+.section-head p {
+  color: #697386;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   DESTINATION GRID
+   ========================================================= */
+
+.cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.cards .card {
+  overflow: hidden;
+
+  padding: 0;
+
+  position: relative;
+}
+
+/* =========================================================
+   DESTINATION IMAGE
+   ========================================================= */
+
+.card-visual {
+  min-height: 205px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: flex-start;
+
+  padding: 20px;
+
+  position: relative;
+
+  font-size: 45px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.70)
+    );
+}
+
+/* =========================================================
+   DESTINATION BACKGROUNDS
+   ========================================================= */
+
+.visual-paris {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85")
+    center / cover no-repeat;
+}
+
+.visual-rome {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=900&q=85")
+    center / cover no-repeat;
+}
+
+.visual-barcelona {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=900&q=85")
+    center / cover no-repeat;
+}
+
+.visual-amsterdam {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=900&q=85")
+    center / cover no-repeat;
+}
+
+.visual-prague {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=900&q=85")
+    center / cover no-repeat;
+}
+
+.visual-swiss {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=900&q=85")
+    center / cover no-repeat;
+}
+
+/* =========================================================
+   DESTINATION BODY
+   ========================================================= */
 
 .card-body {
   padding: 20px;
 }
 
 .card-body h3 {
+  color: #16243d;
+
   font-size: 20px;
-  margin-bottom: 6px;
+
+  margin-bottom: 7px;
 }
 
 .card-body p {
   font-size: 14px;
+
+  line-height: 1.55;
 }
+
+/* =========================================================
+   TEXT LINKS
+   ========================================================= */
 
 .text-link {
+  display: inline-flex;
+
+  align-items: center;
+
   color: #1261d6;
+
   font-weight: 800;
+
   font-size: 14px;
+
+  margin-top: 5px;
 }
 
-/* =========================
+.text-link:hover {
+  color: #084fc4;
+}
+
+/* =========================================================
+   EXTRA CTA CARDS
+   ========================================================= */
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.feature-card {
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+  border: 1px solid #e4ebf4;
+
+  box-shadow:
+    0 10px 30px rgba(20,40,70,0.07);
+
+  transition: all 0.22s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 17px 35px rgba(20,40,70,0.12);
+}
+
+.feature-card h3 {
+  color: #16243d;
+
+  font-size: 18px;
+
+  margin-bottom: 6px;
+}
+
+.feature-card p {
+  font-size: 13px;
+
+  margin-bottom: 15px;
+}
+
+/* =========================================================
+   FEATURE BUTTONS
+   ========================================================= */
+
+.feature-card .btn {
+  min-height: 40px;
+
+  padding: 9px 15px;
+
+  font-size: 12px;
+}
+
+/* =========================================================
    FOOTER
-   ========================= */
+   ========================================================= */
 
 footer {
-  margin-top: 40px;
-  padding: 30px 20px;
-  background: #102a56;
+  margin-top: 50px;
+
+  padding: 35px 20px;
+
+  background: #0d2345;
+
   color: #ffffff;
+
   text-align: center;
 }
 
-/* =========================
+footer p {
+  color: #cbd8ea;
+}
+
+/* =========================================================
    MOBILE
-   ========================= */
+   ========================================================= */
 
-@media (max-width: 900px) {
-
-  .hero {
-    min-height: auto;
-    padding: 45px 20px;
-  }
+@media (max-width: 1000px) {
 
   .hero-grid {
     grid-template-columns: 1fr;
+
     gap: 30px;
   }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-card {
+    max-width: 650px;
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .feature-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .cards {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 750px) {
 
   h1 {
     font-size: 48px;
   }
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero {
+    padding: 45px 20px;
+  }
+
+  .section-head h2 {
+    font-size: 36px;
   }
 
   .cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
   header {
-    padding: 12px 0;
+    padding: 10px 0;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .hero {
-    padding: 38px 15px;
+    padding: 38px 15px 35px;
+
+    background-position:
+      center center;
   }
 
   .hero-grid {
@@ -436,6 +806,7 @@ footer {
 
   h1 {
     font-size: 40px;
+
     letter-spacing: -1px;
   }
 
@@ -453,9 +824,19 @@ footer {
 
   .hero-card {
     padding: 22px;
+
+    border-radius: 18px;
+  }
+
+  .hero-card h2 {
+    font-size: 22px;
   }
 
   .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 
@@ -464,10 +845,18 @@ footer {
   }
 
   section {
-    padding: 40px 0;
+    padding: 42px 0;
+  }
+
+  .section-head {
+    margin-bottom: 25px;
   }
 
   .section-head h2 {
-    font-size: 32px;
+    font-size: 31px;
+  }
+
+  .card-visual {
+    min-height: 190px;
   }
 }
