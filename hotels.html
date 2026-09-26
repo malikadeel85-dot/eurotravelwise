@@ -579,6 +579,44 @@ footer li a:hover{
     grid-template-columns:1fr;
   }
 }
+
+/* KLOOK HOTEL SEARCH */
+.klook-hotel-search{
+  margin-top:-90px;
+  position:relative;
+  z-index:10;
+}
+
+.klook-hotel-search .search-card{
+  padding:24px;
+}
+
+.klook-widget-frame{
+  width:100%;
+  min-height:340px;
+  overflow:hidden;
+  border-radius:14px;
+}
+
+.klook-widget-frame .klk-aff-widget{
+  display:block;
+  width:100%;
+}
+
+@media(max-width:700px){
+  .klook-hotel-search{
+    margin-top:-55px;
+  }
+
+  .klook-hotel-search .search-card{
+    padding:16px;
+  }
+
+  .klook-widget-frame{
+    min-height:340px;
+  }
+}
+
 </style>
 </head>
 
@@ -647,7 +685,7 @@ footer li a:hover{
 </section>
 
 
-<section class="search-section">
+<section class="search-section klook-hotel-search">
 
   <div class="container">
 
@@ -655,33 +693,21 @@ footer li a:hover{
 
       <div class="search-title">
         <h2>Search Hotels & Accommodation</h2>
-        <p>Find your next European stay through our hotel partner.</p>
+        <p>Search destinations, dates and guests directly with Klook.</p>
       </div>
 
-      <div class="search-fields">
-
-        <div class="field">
-          <label>Where to?</label>
-          <strong>Europe / City / Hotel</strong>
-        </div>
-
-        <div class="field">
-          <label>Check-in</label>
-          <strong>Select your date</strong>
-        </div>
-
-        <div class="field">
-          <label>Guests</label>
-          <strong>2 Adults · 1 Room</strong>
-        </div>
-
-        <a
-          class="search-button"
-          href="https://www.klook.com/en-US/hotels/?aid=136575&aff_adid=1452511"
+      <div class="klook-widget-frame">
+        <ins
+          class="klk-aff-widget"
+          data-wid="136575"
+          data-height="340px"
+          data-adid="1454181"
+          data-lang=""
+          data-prod="search_vertical"
+          data-currency=""
         >
-          Search Hotels
-        </a>
-
+          <a href="https://www.klook.com/?aid=136575">Klook.com</a>
+        </ins>
       </div>
 
     </div>
@@ -908,6 +934,17 @@ document.querySelectorAll(".nav a").forEach(function(link){
     mainNav.classList.remove("open");
   });
 });
+</script>
+
+
+<script>
+(function(d,sc,u){
+  var s=d.createElement(sc),p=d.getElementsByTagName(sc)[0];
+  s.type="text/javascript";
+  s.async=true;
+  s.src=u;
+  p.parentNode.insertBefore(s,p);
+})(document,"script","https://affiliate.klook.com/widget/fetch-iframe-init.js");
 </script>
 
 </body>
