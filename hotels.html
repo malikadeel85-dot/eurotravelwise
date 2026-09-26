@@ -617,6 +617,28 @@ footer li a:hover{
   }
 }
 
+
+/* Clickable Klook hotel benefit cards */
+.benefit-link{
+  display:flex;
+  color:inherit;
+  text-decoration:none;
+  cursor:pointer;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.benefit-link:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(16,32,58,.12);
+  border-color:#ff7a00;
+}
+.benefit-action{
+  display:inline-block;
+  margin-top:9px;
+  color:#ff6a00;
+  font-weight:700;
+  font-size:13px;
+}
+
 </style>
 </head>
 
@@ -723,29 +745,32 @@ footer li a:hover{
 
     <div class="benefit-grid">
 
-      <div class="benefit">
+      <a class="benefit benefit-link" href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2F" target="_blank" rel="nofollow sponsored noopener">
         <div class="icon">💰</div>
         <div>
           <h3>Great Hotel Deals</h3>
           <p>Explore accommodation options and discover available deals.</p>
+          <span class="benefit-action">View Klook Hotels →</span>
         </div>
-      </div>
+      </a>
 
-      <div class="benefit">
+      <a class="benefit benefit-link" href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2F" target="_blank" rel="nofollow sponsored noopener">
         <div class="icon">🌍</div>
         <div>
           <h3>European Destinations</h3>
           <p>Find stays in popular cities and destinations across Europe.</p>
+          <span class="benefit-action">Explore on Klook →</span>
         </div>
-      </div>
+      </a>
 
-      <div class="benefit">
+      <a class="benefit benefit-link" href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2F" target="_blank" rel="nofollow sponsored noopener">
         <div class="icon">🔒</div>
         <div>
           <h3>Easy Booking</h3>
           <p>Continue directly to Klook to search and complete your booking.</p>
+          <span class="benefit-action">Book on Klook →</span>
         </div>
-      </div>
+      </a>
 
     </div>
 
