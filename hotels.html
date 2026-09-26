@@ -579,67 +579,43 @@ footer li a:hover{
     grid-template-columns:1fr;
   }
 }
+</style>
 
+<style>
 /* KLOOK HOTEL SEARCH */
 .klook-hotel-search{
   margin-top:-90px;
   position:relative;
   z-index:10;
 }
-
 .klook-hotel-search .search-card{
   padding:24px;
 }
-
 .klook-widget-frame{
   width:100%;
   min-height:340px;
   overflow:hidden;
   border-radius:14px;
 }
-
 .klook-widget-frame .klk-aff-widget{
   display:block;
   width:100%;
 }
-
-@media(max-width:700px){
-  .klook-hotel-search{
-    margin-top:-55px;
-  }
-
-  .klook-hotel-search .search-card{
-    padding:16px;
-  }
-
-  .klook-widget-frame{
-    min-height:340px;
-  }
-}
-
-
-/* Clickable Klook hotel benefit cards */
-.benefit-link{
-  display:flex;
-  color:inherit;
+.benefit{
   text-decoration:none;
+  color:inherit;
   cursor:pointer;
-  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  transition:transform .2s ease, box-shadow .2s ease;
 }
-.benefit-link:hover{
-  transform:translateY(-4px);
-  box-shadow:0 14px 30px rgba(16,32,58,.12);
-  border-color:#ff7a00;
+.benefit:hover{
+  transform:translateY(-3px);
 }
-.benefit-action{
-  display:inline-block;
-  margin-top:9px;
-  color:#ff6a00;
-  font-weight:700;
-  font-size:13px;
+@media(max-width:700px){
+  .klook-hotel-search{margin-top:-55px;}
+  .klook-hotel-search .search-card{padding:16px;}
 }
-
 </style>
+
 </head>
 
 <body>
@@ -708,16 +684,12 @@ footer li a:hover{
 
 
 <section class="search-section klook-hotel-search">
-
   <div class="container">
-
     <div class="search-card">
-
       <div class="search-title">
-        <h2>Search Hotels & Accommodation</h2>
+        <h2>Search Hotels &amp; Accommodation</h2>
         <p>Search destinations, dates and guests directly with Klook.</p>
       </div>
-
       <div class="klook-widget-frame">
         <ins
           class="klk-aff-widget"
@@ -731,11 +703,8 @@ footer li a:hover{
           <a href="https://www.klook.com/?aid=136575">Klook.com</a>
         </ins>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 
@@ -745,32 +714,29 @@ footer li a:hover{
 
     <div class="benefit-grid">
 
-      <a class="benefit benefit-link" href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2F" target="_blank" rel="nofollow sponsored noopener">
+      <a class="benefit" href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2F" target="_blank" rel="nofollow sponsored noopener">
         <div class="icon">💰</div>
         <div>
           <h3>Great Hotel Deals</h3>
           <p>Explore accommodation options and discover available deals.</p>
-          <span class="benefit-action">View Klook Hotels →</span>
         </div>
-      </a>
+      </div>
 
-      <a class="benefit benefit-link" href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2F" target="_blank" rel="nofollow sponsored noopener">
+      <a class="benefit" href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2F" target="_blank" rel="nofollow sponsored noopener">
         <div class="icon">🌍</div>
         <div>
           <h3>European Destinations</h3>
           <p>Find stays in popular cities and destinations across Europe.</p>
-          <span class="benefit-action">Explore on Klook →</span>
         </div>
-      </a>
+      </div>
 
-      <a class="benefit benefit-link" href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2F" target="_blank" rel="nofollow sponsored noopener">
+      <a class="benefit" href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2F" target="_blank" rel="nofollow sponsored noopener">
         <div class="icon">🔒</div>
         <div>
           <h3>Easy Booking</h3>
           <p>Continue directly to Klook to search and complete your booking.</p>
-          <span class="benefit-action">Book on Klook →</span>
         </div>
-      </a>
+      </div>
 
     </div>
 
@@ -812,7 +778,7 @@ footer li a:hover{
 
           <a
             class="hotel-link"
-            href="https://www.klook.com/en-US/hotels/?aid=136575&aff_adid=1452511"
+            href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2Fcity%2F107-paris-hotels%2F" target="_blank" rel="nofollow sponsored noopener"
           >
             Search Paris Hotels →
           </a>
@@ -834,7 +800,7 @@ footer li a:hover{
 
           <a
             class="hotel-link"
-            href="https://www.klook.com/en-US/hotels/?aid=136575&aff_adid=1452511"
+            href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2Fcity%2F92-rome-hotels%2F" target="_blank" rel="nofollow sponsored noopener"
           >
             Search Rome Hotels →
           </a>
@@ -856,7 +822,7 @@ footer li a:hover{
 
           <a
             class="hotel-link"
-            href="https://www.klook.com/en-US/hotels/?aid=136575&aff_adid=1452511"
+            href="https://affiliate.klook.com/redirect?aid=136575&aff_adid=1452511&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Fhotels%2Fcity%2F138-zurich-hotels%2F" target="_blank" rel="nofollow sponsored noopener"
           >
             Search Switzerland Hotels →
           </a>
