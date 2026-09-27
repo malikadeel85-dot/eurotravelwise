@@ -26,10 +26,6 @@
   </url>
 
   <url>
-    <loc>https://www.eurotravelwise.com/paris.html</loc>
-  </url>
-
-  <url>
     <loc>https://www.eurotravelwise.com/privacy.html</loc>
   </url>
 
@@ -39,6 +35,14 @@
 
   <url>
     <loc>https://www.eurotravelwise.com/disclaimer.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.eurotravelwise.com/paris.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.eurotravelwise.com/paris-travel-guide.html</loc>
   </url>
 
 </urlset>
