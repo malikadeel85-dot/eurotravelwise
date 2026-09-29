@@ -1,907 +1,345 @@
-/* =========================================================
-   EUROTRAVELWISE
-   FINAL PROFESSIONAL TRAVEL WEBSITE DESIGN
-   ========================================================= */
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f6f9fd;
-  color: #172033;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e8edf4;
-  padding: 12px 0;
-  position: relative;
-  z-index: 100;
-}
-
-nav {
-  max-width: 1180px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-/* =========================================================
-   CONTAINER
-   ========================================================= */
-
-.container {
-  max-width: 1180px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-/* =========================================================
-   HEADINGS
-   ========================================================= */
-
-h1,
-h2,
-h3 {
-  margin-top: 0;
-}
-
-h1 {
-  font-size: 62px;
-  line-height: 1.02;
-  margin-bottom: 18px;
-  color: #ffffff;
-  letter-spacing: -2.5px;
-}
-
-h2 {
-  color: #102a56;
-}
-
-h3 {
-  color: #173f78;
-}
-
-p {
-  color: #536176;
-}
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-  position: relative;
-  min-height: 520px;
-  padding: 58px 20px 55px;
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 27, 62, 0.90) 0%,
-      rgba(7, 35, 76, 0.72) 38%,
-      rgba(10, 30, 55, 0.28) 75%,
-      rgba(10, 30, 55, 0.10) 100%
-    ),
-    url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2200&q=90")
-    center center / cover no-repeat;
-}
-
-/* Hero glow */
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at 78% 40%,
-      rgba(255,255,255,0.16),
-      transparent 35%
-    );
-
-  pointer-events: none;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    180deg,
-    rgba(3,22,48,0.05),
-    rgba(3,22,48,0.18)
-  );
-
-  pointer-events: none;
-}
-.hero .container {
-  position: relative;
-  z-index: 10;
-}
-
-.hero h2 {
-  color: #ffffff !important;
-  font-size: 42px;
-  line-height: 1.15;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
-}
-
-.hero p {
-  color: #f2f7ff !important;
-  font-size: 18px;
-  line-height: 1.65;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.35);
-}
-
-/* =========================================================
-   HERO GRID
-   ========================================================= */
-
-.hero-grid {
-  position: relative;
-  z-index: 5;
-
-  max-width: 1180px;
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-
-  gap: 55px;
-  align-items: center;
-}
-
-/* =========================================================
-   HERO TEXT
-   ========================================================= */
-.hero h2 {
-  color: #ffffff !important;
-  font-size: 46px;
-  line-height: 1.12;
-  margin: 0 0 16px;
-  letter-spacing: -1px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
-}
-
-.hero p {
-  color: #f2f7ff !important;
-  font-size: 18px;
-  line-height: 1.65;
-  max-width: 700px;
-  margin: 0;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.30);
-}
-
-.eyebrow {
-  color: #42a5ff;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-
-.hero-copy {
-  max-width: 620px;
-
-  color: #f2f7ff;
-  font-size: 17px;
-  line-height: 1.65;
-
-  margin-bottom: 26px;
-}
-
-/* =========================================================
-   BUTTON AREA
-   ========================================================= */
-
-.actions {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  min-height: 50px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-
-  padding: 13px 24px;
-
-  border-radius: 12px;
-
-  font-size: 14px;
-  font-weight: 800;
-
-  transition: all 0.22s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-}
-
-/* =========================================================
-   KLOOK / BOOK BUTTON
-   ========================================================= */
-
-.btn-primary,
-.klook-btn,
-.btn-klook {
-  background: linear-gradient(
-    135deg,
-    #10b981,
-    #08a66d
-  );
-
-  color: #ffffff !important;
-
-  border: 1px solid #10b981;
-
-  box-shadow:
-    0 12px 25px rgba(16,185,129,0.28);
-}
-
-.btn-primary:hover,
-.klook-btn:hover,
-.btn-klook:hover {
-  background: linear-gradient(
-    135deg,
-    #0da873,
-    #078b5c
-  );
-
-  color: #ffffff !important;
-
-  box-shadow:
-    0 16px 32px rgba(16,185,129,0.38);
-}
-
-/* =========================================================
-   SECONDARY BUTTON
-   ========================================================= */
-
-.btn-light {
-  background: #ffffff;
-
-  color: #102a56 !important;
-
-  border: 1px solid #e2e9f2;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>3 Days in Paris 2026: Perfect First-Time Itinerary | EuroTravelWise</title>
+
+  <meta name="description" content="Plan 3 days in Paris with this practical 2026 itinerary covering the Eiffel Tower, Louvre, Notre-Dame, Montmartre, Seine and essential travel tips.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://www.eurotravelwise.com/3-days-in-paris-itinerary-2026.html">
+
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Hero Text Visibility Fix -->
+  <style>
+    /* Make hero section text clearly visible */
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 25, 60, 0.55);
+      z-index: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h2 {
+      color: #ffffff !important;
+      font-size: 46px !important;
+      line-height: 1.15 !important;
+      font-weight: 800 !important;
+      margin: 0 0 18px !important;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.75) !important;
+    }
+
+    .hero p {
+      color: #ffffff !important;
+      font-size: 19px !important;
+      line-height: 1.65 !important;
+      max-width: 850px !important;
+      margin: 0 !important;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.75) !important;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px !important;
+      }
+
+      .hero p {
+        font-size: 17px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1><a href="index.html">Euro<span>TravelWise</span></a></h1>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="travel-guides.html">Travel Guides</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+
+    <h2>
+      3 Days in Paris 2026: The Perfect First-Time Itinerary
+    </h2>
+
+    <p>
+      Planning a short trip to Paris? This practical 3-day Paris itinerary
+      covers famous landmarks, historic neighbourhoods, scenic walks, food,
+      transport and useful tips for making the most of your first visit.
+    </p>
+
+  </div>
+</section>
 
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.10);
-}
+<section class="content container">
 
-.btn-light:hover {
-  background: #f5f9ff;
-  color: #1261d6 !important;
-}
-
-/* =========================================================
-   HERO RIGHT CARD
-   ========================================================= */
+  <p>
+    <strong>Paris</strong> is one of Europe's most popular city-break
+    destinations, and three days can be enough to experience many of its
+    famous landmarks while still leaving time to enjoy cafés, neighbourhoods
+    and walks along the Seine.
+  </p>
 
-.hero-card {
-  background:
-    linear-gradient(
-      145deg,
-      rgba(14,38,73,0.97),
-      rgba(8,27,54,0.96)
-    );
+  <p>
+    This itinerary is designed for first-time visitors who want a balanced
+    trip rather than trying to see every attraction in the city.
+  </p>
 
-  border: 1px solid rgba(255,255,255,0.14);
+  <div class="notice">
+    <strong>Related guides:</strong>
+    Read our
+    <a href="paris-travel-guide.html">Paris Travel Guide</a>,
+    <a href="best-places-to-visit-in-paris.html">Best Places to Visit in Paris</a>
+    and
+    <a href="best-time-to-visit-paris.html">Best Time to Visit Paris</a>.
+  </div>
 
-  border-radius: 22px;
+  <h2>Day 1: Louvre, Notre-Dame and the Seine</h2>
+
+  <p>
+    Start your first day in central Paris with some of the city's most famous
+    historic and cultural sights.
+  </p>
 
-  padding: 30px;
+  <h3>Morning: Louvre Museum</h3>
+
+  <p>
+    Begin your day at the Louvre. The museum is enormous, so avoid trying to
+    see everything in one visit. Choose a few sections or famous works that
+    interest you and allow enough time to explore comfortably.
+  </p>
 
-  box-shadow:
-    0 25px 55px rgba(0,0,0,0.30);
-
-  backdrop-filter: blur(10px);
-
-  min-height: 280px;
-}
-
-.hero-card h2 {
-  color: #ffffff;
-
-  font-size: 25px;
-
-  line-height: 1.2;
-
-  margin-bottom: 10px;
-}
-
-.hero-card p {
-  color: #dce8f7;
-
-  font-size: 14px;
-
-  line-height: 1.6;
-
-  margin-bottom: 16px;
-}
-
-/* =========================================================
-   HERO LIST
-   ========================================================= */
-
-.hero-list {
-  list-style: none;
-
-  padding: 0;
-  margin: 0;
-}
-
-.hero-list li {
-  color: #ffffff;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  padding: 11px 0;
-
-  border-bottom:
-    1px solid rgba(255,255,255,0.14);
-}
-
-.hero-list li:last-child {
-  border-bottom: none;
-}
-
-/* =========================================================
-   QUICK SERVICE AREA
-   ========================================================= */
-
-.quick-services {
-  position: relative;
-  z-index: 10;
-
-  margin-top: -20px;
-
-  padding-bottom: 10px;
-}
-
-.grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 15px;
-}
-
-/* =========================================================
-   SERVICE CARD
-   ========================================================= */
-
-.card {
-  background: #ffffff;
-
-  border: 1px solid #e2eaf3;
-
-  border-radius: 17px;
-
-  padding: 22px;
-
-  margin: 0;
-
-  box-shadow:
-    0 10px 30px rgba(24,45,75,0.08);
-
-  transition:
-    transform 0.22s ease,
-    box-shadow 0.22s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 18px 40px rgba(24,45,75,0.14);
-}
-
-.card h3 {
-  color: #16243d;
-
-  font-size: 16px;
-
-  margin-bottom: 5px;
-}
-
-.card p {
-  font-size: 12px;
-
-  line-height: 1.5;
-
-  margin: 0;
-}
-
-/* =========================================================
-   SERVICE ICON
-   ========================================================= */
-
-.card-icon {
-  width: 50px;
-  height: 50px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 15px;
-
-  font-size: 25px;
-
-  margin-bottom: 13px;
-
-  background: #eaf3ff;
-}
-
-/* =========================================================
-   MAIN SECTIONS
-   ========================================================= */
-
-section {
-  padding: 65px 0;
-}
-
-.section-head {
-  text-align: center;
-
-  max-width: 760px;
-
-  margin: 0 auto 35px;
-}
-
-.section-head .eyebrow {
-  margin-bottom: 8px;
-}
-
-.section-head h2 {
-  color: #10233f;
-
-  font-size: 42px;
-
-  line-height: 1.15;
-
-  margin-bottom: 10px;
-
-  letter-spacing: -1px;
-}
-
-.section-head p {
-  color: #697386;
-
-  font-size: 15px;
-}
-
-/* =========================================================
-   DESTINATION GRID
-   ========================================================= */
-
-.cards {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 18px;
-}
-
-.cards .card {
-  overflow: hidden;
-
-  padding: 0;
-
-  position: relative;
-}
-
-/* =========================================================
-   DESTINATION IMAGE
-   ========================================================= */
-
-.card-visual {
-  min-height: 205px;
-
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: flex-start;
-
-  padding: 20px;
-
-  position: relative;
-
-  font-size: 45px;
-
-  color: #ffffff;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.70)
-    );
-}
-
-/* =========================================================
-   DESTINATION BACKGROUNDS
-   ========================================================= */
-
-.visual-paris {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.65)
-    ),
-    url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85")
-    center / cover no-repeat;
-}
-
-.visual-rome {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.65)
-    ),
-    url("https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=900&q=85")
-    center / cover no-repeat;
-}
-
-.visual-barcelona {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.65)
-    ),
-    url("https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=900&q=85")
-    center / cover no-repeat;
-}
-
-.visual-amsterdam {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.65)
-    ),
-    url("https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=900&q=85")
-    center / cover no-repeat;
-}
-
-.visual-prague {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.65)
-    ),
-    url("https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=900&q=85")
-    center / cover no-repeat;
-}
-
-.visual-swiss {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.65)
-    ),
-    url("https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=900&q=85")
-    center / cover no-repeat;
-}
-
-/* =========================================================
-   DESTINATION BODY
-   ========================================================= */
-
-.card-body {
-  padding: 20px;
-}
-
-.card-body h3 {
-  color: #16243d;
-
-  font-size: 20px;
-
-  margin-bottom: 7px;
-}
-
-.card-body p {
-  font-size: 14px;
-
-  line-height: 1.55;
-}
-
-/* =========================================================
-   TEXT LINKS
-   ========================================================= */
-
-.text-link {
-  display: inline-flex;
-
-  align-items: center;
-
-  color: #1261d6;
-
-  font-weight: 800;
-
-  font-size: 14px;
-
-  margin-top: 5px;
-}
-
-.text-link:hover {
-  color: #084fc4;
-}
-
-/* =========================================================
-   EXTRA CTA CARDS
-   ========================================================= */
-
-.feature-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 16px;
-}
-
-.feature-card {
-  background: #ffffff;
-
-  border-radius: 18px;
-
-  padding: 24px;
-
-  border: 1px solid #e4ebf4;
-
-  box-shadow:
-    0 10px 30px rgba(20,40,70,0.07);
-
-  transition: all 0.22s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 17px 35px rgba(20,40,70,0.12);
-}
-
-.feature-card h3 {
-  color: #16243d;
-
-  font-size: 18px;
-
-  margin-bottom: 6px;
-}
-
-.feature-card p {
-  font-size: 13px;
-
-  margin-bottom: 15px;
-}
-
-/* =========================================================
-   FEATURE BUTTONS
-   ========================================================= */
-
-.feature-card .btn {
-  min-height: 40px;
-
-  padding: 9px 15px;
-
-  font-size: 12px;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-  margin-top: 50px;
-
-  padding: 35px 20px;
-
-  background: #0d2345;
-
-  color: #ffffff;
-
-  text-align: center;
-}
-
-footer p {
-  color: #cbd8ea;
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 1000px) {
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-
-    gap: 30px;
-  }
-
-  .hero {
-    min-height: auto;
-  }
-
-  .hero-card {
-    max-width: 650px;
-  }
-
-  .grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .feature-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .cards {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-}
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 750px) {
-
-  h1 {
-    font-size: 48px;
-  }
-
-  .hero {
-    padding: 45px 20px;
-  }
-
-  .section-head h2 {
-    font-size: 36px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-  header {
-    padding: 10px 0;
-  }
-
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .hero {
-    padding: 38px 15px 35px;
-
-    background-position:
-      center center;
-  }
-
-  .hero-grid {
-    gap: 25px;
-  }
-
-  h1 {
-    font-size: 40px;
-
-    letter-spacing: -1px;
-  }
-
-  .hero-copy {
-    font-size: 15px;
-  }
-
-  .actions {
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .hero-card {
-    padding: 22px;
-
-    border-radius: 18px;
-  }
-
-  .hero-card h2 {
-    font-size: 22px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 42px 0;
-  }
-
-  .section-head {
-    margin-bottom: 25px;
-  }
-
-  .section-head h2 {
-    font-size: 31px;
-  }
-
-  .card-visual {
-    min-height: 190px;
-  }
-}
-/* ARTICLE HERO TEXT FIX */
-.hero h2 {
-  color: #ffffff !important;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
-}
-
-.hero p {
-  color: #f2f7ff !important;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.35);
-}
+  <h3>Afternoon: Île de la Cité and Notre-Dame</h3>
+
+  <p>
+    After the Louvre, walk toward the Seine and continue to Île de la Cité.
+    Explore the area around Notre-Dame and enjoy the historic atmosphere of
+    central Paris.
+  </p>
+
+  <h3>Evening: Seine Walk</h3>
+
+  <p>
+    Finish your first day with a relaxed walk beside the Seine. You can stop
+    at a café or restaurant before returning to your hotel.
+  </p>
+
+  <h2>Day 2: Eiffel Tower, Musée d'Orsay and Saint-Germain</h2>
+
+  <h3>Morning: Eiffel Tower</h3>
+
+  <p>
+    Start day two with the Eiffel Tower. If you want to go inside or visit
+    one of the viewing levels, check ticket availability before your trip.
+    Arriving earlier in the day can also make the visit easier to manage.
+  </p>
+
+  <h3>Afternoon: Musée d'Orsay</h3>
+
+  <p>
+    Continue toward the Musée d'Orsay, known for its impressive collection
+    of European art. Spend as much time as your interests allow before
+    exploring the surrounding area.
+  </p>
+
+  <h3>Evening: Saint-Germain-des-Prés</h3>
+
+  <p>
+    Spend the evening around Saint-Germain-des-Prés. This is a good area for
+    cafés, restaurants, shops and a slower evening after a busy sightseeing
+    day.
+  </p>
+
+  <h2>Day 3: Montmartre, Sacré-Cœur and the Champs-Élysées</h2>
+
+  <h3>Morning: Montmartre</h3>
+
+  <p>
+    Begin your final day in Montmartre. Explore its streets, small shops,
+    cafés and artistic atmosphere.
+  </p>
+
+  <h3>Sacré-Cœur</h3>
+
+  <p>
+    Continue to the Sacré-Cœur area and take some time to enjoy the views
+    across Paris. Wear comfortable shoes because Montmartre includes
+    sloping streets and stairs.
+  </p>
+
+  <h3>Afternoon: Arc de Triomphe and Champs-Élysées</h3>
+
+  <p>
+    In the afternoon, head toward the Arc de Triomphe and walk along the
+    Champs-Élysées. This gives you a different view of central Paris and
+    provides an easy way to finish your major sightseeing.
+  </p>
+
+  <h3>Evening: Final Paris Dinner</h3>
+
+  <p>
+    For your final evening, choose a restaurant near your hotel or explore
+    another neighbourhood that you enjoyed during the trip.
+  </p>
+
+  <h2>Where to Stay for 3 Days in Paris</h2>
+
+  <p>
+    Choosing the right area can make a short Paris trip much easier. Staying
+    near central attractions or a convenient Metro station can reduce travel
+    time.
+  </p>
+
+  <p>
+    For hotel ideas, see our
+    <a href="best-hotels-in-paris-2026.html">
+      Best Hotels in Paris 2026
+    </a>
+    guide.
+  </p>
+
+  <h2>How to Get Around Paris</h2>
+
+  <p>
+    Paris is well suited to a combination of walking and public transport.
+    The Metro can save time when attractions are farther apart, while walking
+    is often the best way to experience individual neighbourhoods.
+  </p>
+
+  <h2>How Much Does 3 Days in Paris Cost?</h2>
+
+  <p>
+    Your total budget depends heavily on accommodation, restaurants,
+    attractions and transport. A budget-conscious traveller can reduce costs
+    by choosing affordable accommodation and meals, while travellers looking
+    for central hotels and more paid attractions will spend considerably more.
+  </p>
+
+  <p>
+    For a more detailed breakdown, read our
+    <a href="paris-travel-costs-2026.html">
+      Paris Travel Costs 2026
+    </a>
+    guide.
+  </p>
+
+  <h2>What to Book in Advance</h2>
+
+  <ul>
+    <li>Popular museum and attraction tickets</li>
+    <li>Eiffel Tower tickets if you want to visit the tower</li>
+    <li>Hotel accommodation</li>
+    <li>Popular restaurants where reservations are required</li>
+    <li>Any special tours or day trips</li>
+  </ul>
+
+  <h2>Paris 3-Day Itinerary: Quick Summary</h2>
+
+  <ul>
+    <li>
+      <strong>Day 1:</strong>
+      Louvre, Notre-Dame and the Seine
+    </li>
+
+    <li>
+      <strong>Day 2:</strong>
+      Eiffel Tower, Musée d'Orsay and Saint-Germain
+    </li>
+
+    <li>
+      <strong>Day 3:</strong>
+      Montmartre, Sacré-Cœur, Arc de Triomphe and Champs-Élysées
+    </li>
+  </ul>
+
+  <h2>Things to Do in Paris at Night</h2>
+
+  <p>
+    If you still have energy after sightseeing, explore Paris after dark.
+    Evening walks, cafés and illuminated landmarks can give the city a very
+    different atmosphere.
+  </p>
+
+  <p>
+    See our detailed guide:
+    <a href="things-to-do-in-paris-at-night-2026.html">
+      Things to Do in Paris at Night 2026
+    </a>.
+  </p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Is 3 days enough for Paris?</h3>
+
+  <p>
+    Three days can provide a good introduction to Paris, especially if you
+    plan your sightseeing by neighbourhood and book important attractions
+    ahead of time.
+  </p>
+
+  <h3>What should I see first in Paris?</h3>
+
+  <p>
+    First-time visitors commonly include the Eiffel Tower, Louvre,
+    Notre-Dame area, Montmartre and the Seine in their itinerary.
+  </p>
+
+  <h3>Should I book Paris attractions in advance?</h3>
+
+  <p>
+    For popular attractions, checking availability and booking ahead can help
+    you avoid unnecessary waiting and fit more activities into a short trip.
+  </p>
+
+  <h2>Final Tips for Your Paris Trip</h2>
+
+  <p>
+    Keep your itinerary flexible. Paris is best experienced at a comfortable
+    pace, so leave some time for unexpected discoveries, cafés and relaxed
+    walks. Comfortable shoes, advance planning and a convenient hotel
+    location can make a significant difference during a three-day visit.
+  </p>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>
+      &copy; 2026 EuroTravelWise. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
